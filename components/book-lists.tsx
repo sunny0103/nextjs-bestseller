@@ -1,6 +1,5 @@
-"use client"
+"use client";
 
-import { API_URL } from "../app/constant";
 import styles from "../styles/book-lists.module.css";
 
 interface Books {
@@ -12,14 +11,14 @@ interface Books {
   buy_links: { name: string; url: string }[];
 }
 
-export async function getBooks(listName: string) {
-  const response = await fetch(`${API_URL}/list?name=${listName}`, {
-    cache: "no-store",
-  });
-  return response.json();
+interface BookData {
+  results: {
+    list_name: string;
+    books: Books[];
+  };
 }
 
-export default function BookLists({ data }: { data: any }) {
+export default function BookLists({ data }: { data: BookData }) {
   const books = data.results.books;
 
   return (

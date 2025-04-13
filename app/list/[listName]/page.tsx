@@ -1,5 +1,7 @@
-import BookLists, { getBooks } from "../../../components/book-lists";
+import { Suspense } from "react";
+import BookLists from "../../../components/book-lists";
 import { Metadata } from "next";
+import { getBooks } from "../../constant";
 
 type PageProps = {
   params: Promise<{ listName: string }>;
@@ -21,7 +23,9 @@ export default async function BookDetailPage({ params }: PageProps) {
   const data = await getBooks(resolvedParams.listName);
   return (
     <div>
-      <BookLists data={data} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <BookLists data={data} />
+      </Suspense>
     </div>
   );
 }
