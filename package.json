@@ -1,0 +1,33 @@
+{
+  "name": "nextjs-bestseller",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build":"next build",
+    "start":"next start"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunny0103/nextjs-bestseller.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sunny0103/nextjs-bestseller/issues"
+  },
+  "homepage": "https://github.com/sunny0103/nextjs-bestseller#readme",
+  "description": "",
+  "dependencies": {
+    "framer-motion": "^12.6.5",
+    "next": "^15.3.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "22.14.0"
+  }
+}
