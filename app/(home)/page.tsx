@@ -21,7 +21,10 @@ export default async function HomePage() {
   const books = await getCategory();
   return (
     <div className={styles.container}>
-      <h1 className={styles.header}>The New York Times Best Seller</h1>
+      <h1 className={styles.header}>
+        <img src="/images.png" />
+        The New York Times Best Sellers
+      </h1>
       <div className={styles.category}>
         {books.map((book: Book) => (
           <div key={book.list_name}>
