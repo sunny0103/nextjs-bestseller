@@ -1,4 +1,3 @@
-
 import BookLists, { getBooks } from "../../../components/book-lists";
 import { Metadata } from "next";
 
